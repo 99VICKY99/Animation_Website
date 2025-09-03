@@ -49,4 +49,17 @@ body {
     .font-zentry {
         font-family: 'zentry', sans-serif;
     }
+    
+    /* Custom Blue Colors */
+    .text-blue-50 { color: #DFDFF0; }
+    .text-blue-75 { color: #DFDFF2; }
+    .text-blue-100 { color: #F0F2FA; }
+    .text-blue-200 { color: #010101; }
+    .text-blue-300 { color: #4FB7DD; }
+    /* Custom Violet Colors */
+    .text-violet-300 { color: #5724FF; }    
+    /* Custom Yellow Colors */
+    .text-yellow-100 { color: #8E983F; }
+    .text-yellow-300 { color: #EDFF66; }
+
 }
