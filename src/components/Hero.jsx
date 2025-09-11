@@ -11,7 +11,7 @@ gsap.registerPlugin(ScrollTrigger);
 const Hero = () => {
     const [currentIndex, setcurrentIndex] = useState(1);
     const [hasClicked, sethasClicked] = useState(false);
-    const [isLoading, setisLoading] = useState(true);
+    const [isLoading, setisLoading] = useState(false);
     const [loadedVideos, setloadedVideos] = useState(0);
 
     const totalVideos = 4 ;
@@ -84,13 +84,13 @@ const Hero = () => {
         return `videos/hero-${index}.mp4`;
     }
 
-    const miniVideoRef = useRef(null);
+    // const miniVideoRef = useRef(null);
 
   return (
-    <div className='relative h-dvh w-screen overflow-x-hidden '>
+    <div className='relative h-screen w-full overflow-hidden'>
 
         {isLoading && (
-            <div className='flex-center absolute z-[100] h-dvh w-screen overflow-hidden bg-violet-50 '>
+            <div className='flex-center absolute z-[100] h-screen w-full overflow-hidden bg-violet-50 '>
                 <div className='three-body'>
                     <div className='three-body__dot' />
                     <div className='three-body__dot' />
@@ -98,12 +98,13 @@ const Hero = () => {
                 </div>
             </div>
         )}
-      <div id="video-frame" className='relative z-10 h-dvh w-screen overflow-hidden rounded-lg bg-blue-75'>
+      <div id="video-frame" className='relative z-10 h-screen w-full overflow-hidden rounded-lg bg-blue-75'>
         <div>
             <div className='mask-clip-path absolute-center absolute z-50 size-64 cursor-pointer overflow-hidden rounded-lg'>
                 <div onClick={handleMiniVideoClick} className='origin-center scale-50 opacity-0 transition-all duration-500 ease-in hover:scale-100 hover:opacity-100'>
                    <video 
-                    ref={miniVideoRef} 
+                    // ref={miniVideoRef} 
+                    ref={nextVideoRef}
                     src={getVideoSrc(upcomingVideoIndex)}
                     loop
                     muted
@@ -135,7 +136,7 @@ const Hero = () => {
             />
         </div>
         <h1 className='special-font hero-heading absolute bottom-5 right-5 z-40 text-blue-75 '>
-            G<b>a</b>ming
+            G<b>A</b>ming
         </h1>
         <div className='absolute left-0 top-0 z-40 size-full'>
             <div className='mt-24 px-5 sm:px-10'>
