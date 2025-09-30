@@ -91,12 +91,26 @@ npm run build
 npm run preview
 ```
 
+## 🌐 Deployment
+
+**🚀 Live Demo:** [https://animation-website-taupe-one.vercel.app/](https://animation-website-taupe-one.vercel.app/)
+
+This project is configured for multiple deployment options:
+
+### Deploy to Vercel (Recommended)
+1. Push your code to GitHub
+2. Connect your repository to [Vercel](https://vercel.com)
+3. Automatic deployments on every push
+
+
 ## 📋 Available Scripts
 
 - `npm run dev` - Start development server
 - `npm run build` - Build for production
 - `npm run preview` - Preview production build locally
 - `npm run lint` - Run ESLint for code quality
+- `npm run deploy` - Deploy to GitHub Pages
+- `npm run predeploy` - Pre-deployment build
 
 ## 🎨 Components Overview
 
